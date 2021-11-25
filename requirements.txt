@@ -1,7 +1,5 @@
 mpi4py
 matplotlib
 numpy
-scipy.sparse
-scipy.integrate
-sksparse.cholmod
-collections
+scipy
+scikit-sparse

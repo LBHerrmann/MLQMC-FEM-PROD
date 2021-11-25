@@ -5,7 +5,7 @@ Python source code that computes expectations of linear functionals of solutions
 The log-Gaussian coefficients are represented in pre-wavelet expansions and QMC by randomly shifted lattice rules is used.
 
 
-# Pubication
+# Publication
 
 
 Lukas Herrmann, Christoph Schwab. <br /> 
@@ -28,6 +28,14 @@ When you find this code useful for your own research, please cite the mentioned 
 
 
 # Compute results
+
+Install the requirements for example by
+
+```bash
+conda create -n mlqmc python=3.6
+conda activate mlqmc
+conda install -c conda-forge --file requirements.txt 
+```
 
 
 Please execute the following commands from the root directory.
