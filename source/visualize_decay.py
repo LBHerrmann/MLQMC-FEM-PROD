@@ -28,23 +28,23 @@ if __name__ == "__main__":
             ref.append(2 ** (-1.5 * l))
 
     b_01 = loadtxt("betalk_L%d_lambda10.txt" % Lmax)
-    #b_01 = (10 * b_01) ** (1.5)
+    # b_01 = (10 * b_01) ** (1.5)
     b_005 = loadtxt("betalk_L%d_lambda5.txt" % Lmax)
-    #b_005 = (10 * b_005) ** (1.5)
+    # b_005 = (10 * b_005) ** (1.5)
     b_001 = loadtxt("betalk_L%d_lambda1.txt" % Lmax)
-    #b_001 = (10 * b_001) ** (1.5)
+    # b_001 = (10 * b_001) ** (1.5)
 
     ss = linspace(0, s - 1, s)
 
-    ref_str = '$b_{\rm ref}$'
-    b_01_str = '$\lambda=0.1$'
-    b_005_str = '$\lambda=0.05$'
-    b_001_str = '$\lambda=0.01$'
+    ref_str = "$b_{\rm ref}$"
+    b_01_str = "$\lambda=0.1$"
+    b_005_str = "$\lambda=0.05$"
+    b_001_str = "$\lambda=0.01$"
 
-    plt.loglog(ss, ref, 'k-', label=r"$b_{\rm ref}$")
-    plt.loglog(ss, b_01, 'k--', label=r"$\lambda=0.1$")
-    plt.loglog(ss, b_005, 'k:', label=r"$\lambda=0.05$")
-    plt.loglog(ss, b_001, 'k-.', label=r"$\lambda=0.01$")
+    plt.loglog(ss, ref, "k-", label=r"$b_{\rm ref}$")
+    plt.loglog(ss, b_01, "k--", label=r"$\lambda=0.1$")
+    plt.loglog(ss, b_005, "k:", label=r"$\lambda=0.05$")
+    plt.loglog(ss, b_001, "k-.", label=r"$\lambda=0.01$")
 
     plt.grid(True)
 

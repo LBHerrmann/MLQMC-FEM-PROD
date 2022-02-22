@@ -9,15 +9,14 @@ import matplotlib.pyplot as plt
 """
 
 
-
-#resolution of plot
+# resolution of plot
 l = 11
 
 
 for ell0 in range(5, 9):
-    #set parameters
+    # set parameters
     lambdaC = 0.1
-    alpha = 2.
+    alpha = 2.0
     sigma0 = 1.0
 
     kappa, theta = compute_GRF_params(alpha, sigma0, lambdaC)
@@ -29,7 +28,7 @@ for ell0 in range(5, 9):
     k0 = 2 ** (ell - 1) - ell
     y_1[4 + 2 ** (ell + 1) + k0 - 1] = 1
 
-    #load Lmatrices
+    # load Lmatrices
     Lmatrices = []
     for k in range(l + 1):
         if k <= 1:
@@ -42,8 +41,10 @@ for ell0 in range(5, 9):
     u = GRF_prewav_to_hat_precomputed(Lmatrices, theta, kappa, alpha, l, y_1)
 
     xx = linspace(0, 1, N + 1)
-    str = ['k--', 'k-', 'k:', 'k-.']
-    plt.semilogy(xx[:-1], abs(u[:-1]), str[(ell0) % 4], label=r"$\ell=%d,k=%d$" % (ell, k0))
+    str = ["k--", "k-", "k:", "k-."]
+    plt.semilogy(
+        xx[:-1], abs(u[:-1]), str[(ell0) % 4], label=r"$\ell=%d,k=%d$" % (ell, k0)
+    )
     plt.legend(loc="upper right", fontsize=12)
 
 plt.grid(True)
