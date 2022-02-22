@@ -29,8 +29,7 @@ def compute_GRF_params(alpha, sigma0, lambdaC):
 
 def get_next_prime(n):
     """
-    Computes in a naive way the smallest prime number
-    smaller or equal to n
+    Computes in a naive way the smallest prime number greater or equal to n.
     input
 
     :n: int
