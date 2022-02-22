@@ -77,7 +77,6 @@ class Lattice(Sequence):
         self.is_loaded = True
 
     def __getitem__(self,n):
-        """need this for Sequence"""
         if not self.is_loaded:
             raise Exception("Must load a lattice before accessing its points!")
         if n >= self.N:
